@@ -1,0 +1,111 @@
+.main-content {
+  min-height: 500px;
+  margin-top: 40px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 108px;
+}
+
+.main-entrance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 104px;
+  padding: 60px 0 180px;
+}
+
+.entrance-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.entrance-title {
+  font-family: 'BPG Banner Caps', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 0 28px;
+}
+
+.title-blue {
+  color: #315283;
+}
+
+.title-gold {
+  color: #C6A067;
+}
+
+.entrance-subtitle {
+  font-family: 'BPG Rioni Arial', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  color: #032431;
+  margin: 0 0 60px;
+  max-width: 392px;
+}
+
+.entrance-button {
+  display: inline-flex;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #678DC6;
+  color: #D9E3F1;
+  font-family: 'BPG Rioni Arial', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.entrance-button:hover {
+  background: #5678b0;
+}
+
+.entrance-image-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+}
+
+.entrance-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.entrance-stats {
+  position: absolute;
+  bottom: 10px;
+  left: 9px;
+  display: flex;
+  gap: 14px;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 40px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.stat-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.stat-number {
+  font-family: 'BPG Banner Caps', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #101B2C;
+  text-align: center;
+}

@@ -1,0 +1,314 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= GLOBAL BASE ================= */
+
+body {
+  font-family: 'BPG Rioni Arial', 'BPG Banner Caps', sans-serif !important;
+}
+
+.container {
+  max-width: 1800px;
+  width: 90%;
+  margin: 40px auto 0 auto;
+}
+
+main {
+  margin-top: 80px;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  background: #6c8fc4;
+  padding: 12px 0;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #ddd;
+  border: 2px solid white;
+}
+
+.school-name {
+  color: white;
+  font-size: 18px;
+}
+
+.menu {
+  display: flex;
+  gap: 35px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+.active {
+  color: #d0d5f6 !important;
+}
+/* ================= SMART HEADER BEHAVIOR ================= */
+
+.main-navbar {
+  width: 100%;
+  background: #6c8fc4;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: transform 0.35s ease;
+}
+
+.main-navbar.hide {
+  transform: translateY(-100%);
+}
+
+
+/* space for fixed header */
+body {
+  padding-top: 0px;
+}
+
+/* hover trigger zone */
+.header-hover-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  z-index: 9998;
+}
+
+/* ================= DROPDOWN MENU ================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.dropdown-link:hover {
+  opacity: 0.7;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #6c8fc4 !important;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  padding: 10px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #678DC6;
+  padding: 60px 0 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1224px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  gap: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.footer-logo-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.footer-school-name {
+  color: #FFF;
+  font-family: 'BPG Banner Caps', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.mini{
+    width: 50px !important;
+    height: 50px !important;
+}
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+.footer-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.footer-heading {
+  color: #FFF;
+  font-family: 'BPG Banner Caps', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: 'BPG Rioni Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contact-item svg {
+  flex-shrink: 0;
+}
+
+.footer-separator {
+  max-width: 1224px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.50);
+  margin: 60px auto 0;
+}
+
+.footer-bottom {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 24px 0;
+}
