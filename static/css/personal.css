@@ -1,0 +1,213 @@
+/* ===== Main Content ===== */
+
+.main-p {
+    margin-top: 120px;
+    margin-left: 168px;
+    margin-bottom: 40px;
+}
+
+/* ===== Hero Banner ===== */
+
+.hero-banner {
+    width: 100%;
+    height: 490px;
+    background: #d9d9d9;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== Featured Teacher ===== */
+
+.featured-teacher {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.featured-teacher-image {
+    width: 392px;
+    height: 340px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: url('../img/direqtori.jpeg') center center / cover no-repeat;
+}
+
+.featured-teacher-name {
+    font-family: 'BPG Banner Caps', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #032431;
+    margin-bottom: 12px;
+}
+
+.featured-teacher-desc {
+    font-family: 'BPG Rioni Arial', sans-serif;
+    font-size: 24px;
+    color: #032431;
+    max-width: 392px;
+}
+
+/* ===== Teachers Section ===== */
+
+.teachers-heading {
+    font-family: 'BPG Banner Caps', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #032431;
+    margin-bottom: 32px;
+    margin-top: 42px;
+    max-width: 692px;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 362px);
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===== Teacher Card ===== */
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    background: #d9d9d9;
+    overflow: hidden;
+    width: 362px;
+}
+
+.teacher-card-image {
+    position: relative;
+    height: 283px;
+    width: 100%;
+    background: url('../img/person.png') center center / cover no-repeat;
+    border-radius: 24px 24px 0 0;
+}
+
+.direqtori {
+    background: url('../img/direqtori.jpeg') center center / cover no-repeat;
+}
+
+.teacher-name-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.25);
+    color: #fff;
+    font-family: 'BPG Banner Caps', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.teacher-card-body {
+    padding: 20px;
+    flex: 1;
+    min-height: 178px;
+    width: 100%;
+}
+
+.teacher-desc {
+    font-family: 'BPG Rioni Arial', sans-serif;
+    font-size: 18px;
+    color: #032431;
+    line-height: 1.75;
+}
+
+.last{
+    margin-bottom: 60px;
+}
+/* ===== Responsive ===== */
+
+/* ===== Tablet (2 cards) ===== */
+@media (max-width: 770px) {
+
+    .main-p{
+        margin-left: 50px;
+    }
+
+    .hero-banner {
+        height: 380px;
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(2, 320px);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .featured-teacher-name {
+        font-size: 26px;
+    }
+    .teacher-card {
+        width: 320px;
+    }
+
+    .teacher-card-image {
+        height: 250px;
+    }
+
+}
+
+
+/* ===== Phone Large (1 card) ===== */
+@media (max-width: 430px) {
+    .main-p{
+        margin-left: 30px;
+    }
+
+    .hero-banner {
+        height: 300px;
+    }
+    .featured-teacher {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .teachers-grid {
+        grid-template-columns: 300px;
+    }
+
+    .teacher-card {
+        width: 300px;
+    }
+
+    .teacher-card-image {
+        height: 230px;
+    }
+
+}
+
+
+/* ===== Phone Small (1 card smaller) ===== */
+@media (max-width: 350px) {
+
+    .teachers-grid {
+        grid-template-columns: 260px;
+    }
+
+    .teacher-card {
+        width: 260px;
+    }
+
+    .teacher-card-image {
+        height: 210px;
+    }
+
+}

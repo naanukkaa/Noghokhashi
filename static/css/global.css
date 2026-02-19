@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+/* ===== Scroll Fade Animation ===== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================= GLOBAL BASE ================= */
 
 body {
@@ -22,6 +35,41 @@ main {
   margin-top: 80px;
 }
 
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #6c8fc4;
+    color: white;
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    background: #315283;
+    transform: translateY(-3px);
+}
+
+.scroll-top.show {
+    display: flex;
+}
 
 /* ================= NAVBAR ================= */
 

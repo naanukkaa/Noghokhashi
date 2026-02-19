@@ -121,3 +121,50 @@ if (toggle && footerLinks) {
   });
 }
 
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// show button when scrolling down
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+
+});
+
+// scroll to top when clicked
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+
+document.querySelectorAll(".fade-in").forEach(el => {
+
+    observer.observe(el);
+
+});
