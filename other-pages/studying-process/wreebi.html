@@ -66,7 +66,10 @@
     </header>
     
     <main>
-        <div class="main-content"></div>
+        <div class="main-content">
+            <div class="circles-container"></div>
+
+        </div>
     </main>
 
     <footer class="footer">
@@ -130,5 +133,14 @@
     </footer>
 
     <script src="../../static/js/global.js"></script>
+
+    
+<script>
+fetch('../clubs.html')
+  .then(res => res.text())
+  .then(data => {
+      document.querySelector('.circles-container').innerHTML = data;
+  });
+</script>
 </body>
 </html>

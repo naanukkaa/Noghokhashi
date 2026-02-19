@@ -12,6 +12,11 @@
     <!-- fonts -->
      <link rel="stylesheet" href="https://cdn.web-fonts.ge/fonts/bpg-banner-caps/css/bpg-banner-caps.min.css">
      <link rel="stylesheet" href="https://cdn.web-fonts.ge/fonts/bpg-rioni-arial/css/bpg-rioni-arial.min.css">
+
+     <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 </head>
 <body>
     <div class="header-hover-zone"></div>
@@ -21,6 +26,11 @@
                 <div class="logo"></div>
                 <div class="school-name">ნოღოხაშის საჯარო სკოლა</div>
             </a>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav class="menu">
                 <div class="dropdown">
                         <a href="#" class="dropdown-link">ჩვენს შესახებ</a>
@@ -67,30 +77,56 @@
     
     <main>
         <div class="main-content">
-            <div class="main-entrance">
-                <div class="entrance-content">
-                    <h1 class="entrance-title">
-                        <span class="title-blue">ჩვენ </span>
-                        <span class="title-gold">ვზრუნავთ</span>
-                        <span class="title-blue"> მომავალზე!</span>
-                    </h1>
-                    <p class="entrance-subtitle">სსიპ ქალაქ აბაშის ნოღოხაშის საჯარო სკოლა</p>
-                    <a href="other-pages/contact.html" class="entrance-button">კონტაქტი</a>
-                </div>
-                <div class="entrance-image-wrapper">
-                    <img src="static/img/main.jpg" alt="Students celebrating" class="entrance-image">
-                    <div class="entrance-stats">
-                        <div class="stat-item">
-                            <img src="static/icon/teach.svg" alt="Teacher icon" class="stat-icon">
-                            <span class="stat-number" data-target="19">0</span>
-                        </div>
-                        <div class="stat-item">
-                            <img src="static/icon/stud.svg" alt="Students icon" class="stat-icon">
-                            <span class="stat-number" data-target="76">0</span>
+            <section>
+                <div class="main-entrance">
+                    <div class="entrance-content">
+                        <h1 class="entrance-title">
+                            <span class="title-blue">ჩვენ </span>
+                            <span class="title-gold">ვზრუნავთ</span>
+                            <span class="title-blue"> მომავალზე!</span>
+                        </h1>
+                        <p class="entrance-subtitle">სსიპ ქალაქ აბაშის ნოღოხაშის საჯარო სკოლა</p>
+                        <a href="other-pages/contact.html" class="entrance-button">კონტაქტი</a>
+                    </div>
+                    <div class="entrance-image-wrapper">
+                        <img src="static/img/main.jpg" alt="Students celebrating" class="entrance-image">
+                        <div class="entrance-stats">
+                            <div class="stat-item">
+                                <img src="static/icon/teach.svg" alt="Teacher icon" class="stat-icon">
+                                <span class="stat-number" data-target="19">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <img src="static/icon/stud.svg" alt="Students icon" class="stat-icon">
+                                <span class="stat-number" data-target="76">0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="news-section">
+                <div class="news-header">
+                    <h2 class="news-title">სიახლეები</h2>
+                    <a href="other-pages/news.html" class="news-link">იხილეთ მეტი</a>
+                </div>
+                <div class="news-cards"></div>
+            </section>
+
+            <section class="team-section">
+                <div class="team-content">
+                    <h2 class="team-title">პროფესიონალი მასწავლებლებისაგან შემდგარი გუნდი</h2>
+                    <a href="other-pages/personal.html" class="team-button">იხილეთ დეტალურად</a>
+                </div>
+            </section>
+
+            <section class="circles-section">
+                <div class="circles-header">
+                    <h2 class="circles-title">წრეები</h2>
+                    <a href="other-pages/studying-process/wreebi.html" class="circles-link">იხილეთ დეტალურად</a>
+                </div>
+                <div class="circles-container"></div>
+            </section>
+
         </div>
     </main>
 
@@ -118,7 +154,7 @@
             </div>
 
             <div class="footer-middle">
-                <h3 class="footer-heading">ზოგადი ინფორმაცია</h3>
+                <h3 class="footer-heading footer-toggle"> ზოგადი ინფორმაცია <span class="arrow">▼</span></h3>
                 <nav class="footer-links">
                     <a href="other-pages/our-school/istoria.html">ისტორია</a>
                     <a href="other-pages/our-school/infrastuctura.html">ინფრასტრუქტურა</a>
@@ -151,9 +187,20 @@
         </div>
 
         <div class="footer-separator"></div>
-        <div class="footer-bottom">jgdc</div>
+        <div class="footer-bottom">© ყველა უფლება დაცულია. ნოღოხაშის საჯარო სკოლა</div>
     </footer>
 
     <script src="static/js/global.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+    fetch('other-pages/clubs.html')
+    .then(res => res.text())
+    .then(data => {
+        document.querySelector('.circles-container').innerHTML = data;
+    });
+    </script>
+
 </body>
 </html>

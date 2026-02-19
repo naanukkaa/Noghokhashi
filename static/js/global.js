@@ -80,3 +80,62 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(statsSection);
+
+fetch('../../other-pages/news-cards.html')
+  .then(res => res.text())
+  .then(data => {
+      const container = document.querySelector('.news-cards');
+      container.innerHTML = data;
+
+      // wait for browser to render inserted HTML
+      setTimeout(() => {
+
+          // destroy if already initialized (prevents duplication bug)
+          if ($(container).hasClass('slick-initialized')) {
+              $(container).slick('unslick');
+          }
+
+          $(container).slick({
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 2000,
+              arrows: true,
+              infinite: true,
+              dots: true,
+              responsive: [
+                  {
+                      breakpoint: 1024,
+                      settings: { slidesToShow: 2 }
+                  },
+                  {
+                      breakpoint: 768,
+                      settings: { slidesToShow: 1 }
+                  }
+              ]
+          });
+
+      }, 100); // small delay is critical
+  })
+  .catch(err => console.error(err));
+
+
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+
+menu.classList.toggle("active");
+
+});
+
+
+
+const toggle = document.querySelector(".footer-toggle");
+const footerLinks = document.querySelector(".footer-links");
+
+toggle.addEventListener("click", () => {
+
+footerLinks.classList.toggle("active");
+
+});
