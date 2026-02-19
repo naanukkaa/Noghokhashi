@@ -334,117 +334,158 @@ body {
   font-size: 12px;
 }
 
-
-/* mobile accordion */
-@media (max-width: 425px) {
-
-  .footer-links {
+  .footer-middle span{
     display: none;
   }
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
-  .footer-links.active {
-    display: flex;
-  }
-
-  .footer-toggle {
-    cursor: pointer;
-  }
-
-}
-
-
-
-/* MOBILE */
 @media (max-width: 769px) {
+  .nav-container {
+    position: relative;
+  }
 
   .burger {
     display: flex;
   }
 
   .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     display: none;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     background: #6c8fc4;
-    padding: 15px 0;
+    padding: 10px 0;
+    z-index: 999;
   }
 
   .menu.active {
     display: flex;
   }
 
+  .menu li {
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .footer-school-name {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+
+
+  .footer-middle h3, .footer-right h3{
+    font-size: 22px;
+  }
+
+  .footer-middle p, .footer-right p{
+    font-size: 16px;
+  }
 }
 
-/* ================= TABLET ================= */
-@media (max-width: 769px) {
-  .school-name {
-    font-size: 16px;
-    text-align: center;
+
+
+@media (max-width: 426px) {
+
+  .footer,
+  .main-navbar {
+    width: 100%;
+    max-width: 425px;
+    box-sizing: border-box;
   }
 
   .footer-container {
-    flex-direction: column;
-    gap: 50px;
+    align-items: center;
     text-align: center;
-  }
-
-  .footer-logo-section {
-    justify-content: center;
+    flex-direction: column !important;
   }
 
   .footer-social-icons {
     justify-content: center;
   }
 
+  .footer-school-name {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
   .footer-contact {
     align-items: center;
+    justify-content: center;
   }
 
-}
+  .footer-middle span {
+    display: block;
+  }
 
-
-/* ================= MOBILE LARGE ================= */
-@media (max-width: 425px) {
-
-  .menu {
-    flex-direction: column;
+  /* ======================
+     FOOTER TOGGLE
+     ====================== */
+  .footer-toggle {
+    display: flex;
+    justify-content: space-between; /* heading left, arrow right */
     align-items: center;
-    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 0 !important;
   }
 
-  .logo {
-    width: 45px;
-    height: 45px;
+  .footer-toggle h3 {
+    margin: 0;
+    flex: 1;               /* take remaining space */
+    text-align: left;      /* keep heading left-aligned */
   }
 
-  .school-name {
-    font-size: 14px;
-  }
-
-  .footer-school-name {
-    font-size: 20px;
-  }
-
-  .footer-heading {
-    font-size: 20px;
-  }
-
-  .footer-links a {
+  .footer-toggle .arrow {
     font-size: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.3s ease;
   }
 
-}
-
-
-/* ================= MOBILE SMALL ================= */
-@media (max-width: 380px) {
-
-  .footer-school-name {
-    font-size: 18px;
+  /* Footer links */
+  .footer-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 16px !important;
+    text-align: left;     /* aligns links under heading */
   }
 
-  .footer-heading {
-    font-size: 18px;
+  .footer-links.active {
+    display: flex;
   }
 
+  .footer-toggle.active .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* ======================
+     ALIGN MIDDLE & RIGHT SECTIONS
+     ====================== */
+  .footer-middle h3,
+  .footer-right h3 {
+    margin-left: 20px;     /* auto margins center the section */
+    margin-right: auto;
+  }
+
+  .footer-middle p,
+  .footer-right p {
+    margin-left: auto;
+    margin-right: auto;    /* center paragraph text */
+  }
+
+  .footer-right {
+    margin: 0;
+  }
+  
+  .footer-social-icons {
+    justify-content: center;
+    margin-left: 20px;
+  }
 }

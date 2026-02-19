@@ -22,7 +22,7 @@
 
 .entrance-title {
   font-family: 'BPG Banner Caps', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 64px;
+  font-size: 70px;
   font-weight: 400;
   line-height: 150%;
   margin: 0 0 28px;
@@ -84,7 +84,6 @@
   bottom: 10px;
   left: 9px;
   display: flex;
-  background: #fff;
   padding: 20px 24px ;
   border-radius: 40px;
 }
@@ -231,7 +230,7 @@
 
 /* Circles Section */
 .circles-section {
-  padding: 90px 0 100px;
+  padding: 40px 0 100px;
 }
 
 .circles-header {
@@ -279,7 +278,9 @@
   border-radius: 50%;
 }
 
-/* ================= TABLET ================= */
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
 @media (max-width: 769px) {
 
@@ -288,99 +289,247 @@
   }
 
   .main-entrance {
-
     gap: 50px;
-
   }
 
+
   .entrance-title {
-
-    font-size: 48px;
-
+    font-size: 40px;
   }
 
   .entrance-subtitle {
-
     font-size: 20px;
-
+  }
+  
+  .entrance-image {
+    width: auto;
+    height: 360px;
   }
 
+  .entrance-stats {
+    bottom: 0px;
+    left: 0px;
+    padding: 10px 14px ;
+  }
+
+  .stat-item {
+    gap: 9px;
+  }
+
+  .stat-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .news-title {
+    font-size: 26px;
+  }
+
+  .news-link {
+    font-size: 20px;
+  }
+
+  .circles-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 88px;
+    margin-top: 88px;
+  }
+  .circle-item {
+    width: 134px;
+    height: 134px;
+  }
 }
 
-@media (max-width: 769px) {
 
-.news-title {
 
-font-size: 26px;
-
-}
-
-.news-link {
-
-font-size: 20px;
-
-}
-
-}
-
-/* ================= MOBILE LARGE ================= */
-
-@media (max-width: 425px) {
+/* ========================= */
+/* MOBILE MAX 425px */
+/* ========================= */
+@media (max-width: 426px) {
 
   .main-content {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  .main-entrance {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 40px 0 120px;
+  }
+
+  .entrance-content {
+    max-width: 100%;
   }
 
   .entrance-title {
-    font-size: 32px;
+    font-size: 42px;
+    line-height: 120%;
   }
 
   .entrance-subtitle {
-    font-size: 18px;
+    font-size: 20px;
+    max-width: 100%;
+    margin-bottom: 40px;
   }
 
   .entrance-button {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+
+  .entrance-image-wrapper {
+    max-width: 100%;
+  }
+
+  .entrance-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .entrance-stats {
+    flex-direction: row;
+    padding: 8px 12px;
+    bottom: 0;
+    left: 18%;
+    transform: translateX(-50%);
+  }
+
+  .stat-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .stat-number {
     font-size: 18px;
-    padding: 8px 18px;
+  }
+
+  .news-title {
+    font-size: 28px;
+  }
+
+  .news-link {
+    font-size: 18px;
+  }
+
+  .news-header {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .news-card {
+    height: 320px;
+  }
+
+  .circles-container {
+    gap: 34px;
+    margin-top: 60px;
+  }
+
+  .circle-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-section {
+    height: 420px;
+  }
+
+  .team-title {
+    font-size: 28px;
+  }
+
+  .team-button {
+    font-size: 12px !important;
+    padding: 8px 20px;
+  }
+}
+
+/* ========================= */
+/* MOBILE MAX 380px */
+/* ========================= */
+@media (max-width: 380px) {
+
+  .main-content {
+    padding: 0 12px;
+  }
+
+  .main-entrance {
+    gap: 20px;
+    padding: 30px 0 100px;
+  }
+
+  .entrance-title {
+    font-size: 28px;
+  }
+
+  .entrance-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .entrance-button {
+    font-size: 16px;
+    padding: 6px 16px;
+  }
+
+  .entrance-image {
+    max-height: 240px;
+  }
+
+  .entrance-stats {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .stat-number {
+    font-size: 16px;
+  }
+
+  .news-title {
+    font-size: 20px;
+  }
+
+  .news-link {
+    font-size: 16px;
+  }
+
+  .news-card {
+    height: 280px;
+  }
+
+  .circles-container {
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  .circle-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-section {
+    height: 380px;
   }
 
   .team-title {
     font-size: 24px;
   }
 
-  .news-title,
-  .circles-title {
-    font-size: 24px;
-  }
-
-  .news-link,
-  .circles-link {
-    font-size: 18px;
-  }
-
-  .circle-item {
-    width: 130px;
-    height: 130px;
-  }
-
-}
-
-
-/* ================= MOBILE SMALL ================= */
-
-@media (max-width: 380px) {
-
-  .entrance-title {
-    font-size: 26px;
-  }
-
-  .entrance-subtitle {
+  .team-button {
     font-size: 16px;
+    padding: 6px 14px;
   }
-
-  .circle-item {
-    width: 110px;
-    height: 110px;
-  }
-
 }
+

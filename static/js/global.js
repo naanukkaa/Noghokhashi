@@ -1,13 +1,23 @@
+// ===== HEADER SHOW/HIDE ON SCROLL & HOVER =====
 const header = document.querySelector(".main-navbar");
 const hoverZone = document.querySelector(".header-hover-zone");
 let lastScrollY = window.scrollY;
 let hideTimeout;
 
+const showHeader = () => {
+  header.classList.remove("hide");
+  clearTimeout(hideTimeout);
+};
+
+const hideHeaderDelayed = () => {
+  if (window.scrollY <= 0) return;
+  hideTimeout = setTimeout(() => header.classList.add("hide"), 2000);
+};
+
 // Scroll behavior
 window.addEventListener("scroll", () => {
   const currentScroll = window.scrollY;
 
-  // Always show if at top
   if (currentScroll <= 0) {
     header.classList.remove("hide");
     lastScrollY = 0;
@@ -15,127 +25,99 @@ window.addEventListener("scroll", () => {
   }
 
   if (currentScroll > lastScrollY) {
-    // Scroll down → hide
-    header.classList.add("hide");
+    header.classList.add("hide"); // scrolling down
   } else if (currentScroll < lastScrollY) {
-    // Scroll up → show
-    header.classList.remove("hide");
+    header.classList.remove("hide"); // scrolling up
   }
 
   lastScrollY = currentScroll;
 });
 
-// Hover behavior — only matters if header is hidden
-const showHeader = () => {
-  if (!header.classList.contains("hide")) return; // do nothing if already visible
-  header.classList.remove("hide");
-  clearTimeout(hideTimeout);
-};
-
-const hideHeaderDelayed = () => {
-  if (window.scrollY <= 0) return; // never hide if at top
-  hideTimeout = setTimeout(() => {
-    header.classList.add("hide");
-  }, 2000); // 2s delay
-};
-
-// Trigger hover only when header is hidden from scroll
-hoverZone.addEventListener("mouseenter", showHeader);
-header.addEventListener("mouseenter", showHeader);
+// Hover behavior
+[hoverZone, header].forEach(el => {
+  el.addEventListener("mouseenter", showHeader);
+});
 header.addEventListener("mouseleave", hideHeaderDelayed);
 
-
-
+// ===== STAT COUNTERS =====
 const counters = document.querySelectorAll(".stat-number");
 
 const animateCounters = () => {
   counters.forEach(counter => {
-    const target = +counter.getAttribute("data-target");
+    const target = +counter.dataset.target;
     const speed = 100; // smaller = faster
 
-    const updateCount = () => {
-      const current = +counter.innerText;
+    const update = () => {
+      const current = +counter.innerText || 0;
       const increment = Math.ceil(target / speed);
 
       if (current < target) {
         counter.innerText = current + increment;
-        setTimeout(updateCount, 20);
+        requestAnimationFrame(update);
       } else {
         counter.innerText = target;
       }
     };
 
-    updateCount();
+    update();
   });
 };
 
-// Run animation when section appears on screen
+// Trigger animation when section appears
 const statsSection = document.querySelector(".entrance-stats");
+if (statsSection) {
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.disconnect();
+    }
+  });
+  observer.observe(statsSection);
+}
 
-const observer = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) {
-    animateCounters();
-    observer.disconnect(); // run only once
-  }
-});
-
-observer.observe(statsSection);
-
+// ===== NEWS CARDS SLICK SLIDER =====
 fetch('../../other-pages/news-cards.html')
   .then(res => res.text())
   .then(data => {
-      const container = document.querySelector('.news-cards');
-      container.innerHTML = data;
+    const container = document.querySelector('.news-cards');
+    container.innerHTML = data;
 
-      // wait for browser to render inserted HTML
-      setTimeout(() => {
+    setTimeout(() => {
+      if ($(container).hasClass('slick-initialized')) $(container).slick('unslick');
 
-          // destroy if already initialized (prevents duplication bug)
-          if ($(container).hasClass('slick-initialized')) {
-              $(container).slick('unslick');
-          }
-
-          $(container).slick({
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 2000,
-              arrows: true,
-              infinite: true,
-              dots: true,
-              responsive: [
-                  {
-                      breakpoint: 1024,
-                      settings: { slidesToShow: 2 }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: { slidesToShow: 1 }
-                  }
-              ]
-          });
-
-      }, 100); // small delay is critical
+      $(container).slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        infinite: true,
+        dots: true,
+        responsive: [
+          { breakpoint: 1024, settings: { slidesToShow: 2 } },
+          { breakpoint: 768, settings: { slidesToShow: 1 } }
+        ]
+      });
+    }, 50); // slight delay
   })
-  .catch(err => console.error(err));
+  .catch(console.error);
 
-
+// ===== BURGER MENU =====
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 
-burger.addEventListener("click", () => {
+if (burger && menu) {
+  burger.addEventListener("click", () => menu.classList.toggle("active"));
+}
 
-menu.classList.toggle("active");
-
-});
-
-
-
+// ===== FOOTER TOGGLE =====
 const toggle = document.querySelector(".footer-toggle");
 const footerLinks = document.querySelector(".footer-links");
 
-toggle.addEventListener("click", () => {
+if (toggle && footerLinks) {
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");       // rotate arrow
+    footerLinks.classList.toggle("active");  // show/hide links
+  });
+}
 
-footerLinks.classList.toggle("active");
-
-});
