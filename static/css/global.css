@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /* ===== Scroll Fade Animation ===== */
@@ -304,12 +305,12 @@ body {
 }
 
 .footer-links a {
-  color: #FFF;
+  color: #FFF !important;
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: opacity 0.3s;
 }
 

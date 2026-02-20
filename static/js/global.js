@@ -168,3 +168,10 @@ document.querySelectorAll(".fade-in").forEach(el => {
     observer.observe(el);
 
 });
+
+
+function confirmCall(number) {
+    if (confirm("გსურთ დარეკვა?")) {
+        window.location.href = "tel:" + number;
+    }
+}

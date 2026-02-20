@@ -50,9 +50,11 @@
 
 .featured-teacher-desc {
     font-family: 'BPG Rioni Arial', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.75;
+    margin-top: 50px;
     color: #032431;
-    max-width: 392px;
+    max-width: 792px;
 }
 
 /* ===== Teachers Section ===== */
@@ -119,8 +121,11 @@
 .teacher-card-body {
     padding: 20px;
     flex: 1;
-    min-height: 178px;
+    min-height: 214px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .teacher-desc {
@@ -133,6 +138,15 @@
 .last{
     margin-bottom: 60px;
 }
+
+.numb {
+    text-decoration: none !important;
+    color: #ffffff;
+}
+
+.link {
+    color: #000000;
+}   
 /* ===== Responsive ===== */
 
 /* ===== Tablet (2 cards) ===== */
@@ -154,6 +168,11 @@
 
     .featured-teacher-name {
         font-size: 26px;
+    }
+
+    .featured-teacher-desc {
+        font-size: 18px;
+        margin-top: 30px;
     }
     .teacher-card {
         width: 320px;
