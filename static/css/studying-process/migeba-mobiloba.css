@@ -1,0 +1,175 @@
+.main-p{
+    margin-left: 58px;
+    margin-top: -4px;
+}
+
+.admission-mobility-page {
+    padding: 130px 108px;
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+}
+
+.admission-hero {
+    max-width: 900px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.admission-hero h2 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 42px;
+    color: #315283;
+    margin-bottom: 14px;
+}
+
+.admission-hero p {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: #4f6487;
+}
+
+.admission-main-grid {
+    max-width: 1100px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.admission-box,
+.mobility-card,
+.admission-note-box {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    padding: 30px 32px;
+    box-shadow: 0 12px 30px rgba(49, 82, 131, 0.08);
+}
+
+.admission-box h3,
+.mobility-section-title h3,
+.mobility-card h4 {
+    font-family: "BPG Banner Caps", sans-serif;
+    color: #315283;
+}
+
+.admission-box h3,
+.mobility-section-title h3 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.admission-box p,
+.mobility-card p,
+.admission-note-box p {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #1f1f1f;
+}
+
+.mobility-section-title {
+    max-width: 1100px;
+    margin: 0 auto 20px;
+}
+
+.mobility-grid {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.mobility-card h4 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.admission-note-box {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    border-left: 8px solid #C6A067;
+}
+
+.admission-bottom-row {
+    max-width: 1100px;
+    margin: 36px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.admission-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 78px;
+    padding: 18px 30px;
+    border-radius: 999px;
+    background: #315283;
+    color: #fff;
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 12px 24px rgba(49, 82, 131, 0.18);
+}
+
+.admission-btn:hover {
+    background: #C6A067;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #6c8fc4;
+}
+
+.secondary-btn:hover {
+    background: #4d73ab;
+}
+
+@media (max-width: 992px) {
+    .admission-mobility-page {
+        padding: 90px 40px;
+    }
+
+    .admission-main-grid,
+    .mobility-grid,
+    .admission-bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .admission-mobility-page {
+        padding: 70px 20px;
+    }
+
+    .admission-hero h2 {
+        font-size: 30px;
+    }
+
+    .admission-hero p,
+    .admission-box p,
+    .mobility-card p,
+    .admission-note-box p {
+        font-size: 16px;
+    }
+
+    .admission-box h3,
+    .mobility-section-title h3 {
+        font-size: 24px;
+    }
+
+    .mobility-card h4 {
+        font-size: 21px;
+    }
+
+    .admission-box,
+    .mobility-card,
+    .admission-note-box {
+        padding: 24px 20px;
+    }
+}

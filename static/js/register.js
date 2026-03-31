@@ -1,15 +1,39 @@
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
+import { auth } from "./firebase.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyAa2KFjzxDbjvgtOfoNV9pHczDtRytV08k",
-    authDomain: "noghokhashi.firebaseapp.com",
-    projectId: "noghokhashi",
-    storageBucket: "noghokhashi.firebasestorage.app",
-    messagingSenderId: "376954968093",
-    appId: "1:376954968093:web:94092dddcfc2843cbf8ef4",
-    measurementId: "G-F40RS65ZDD"
-  };
+document.addEventListener("DOMContentLoaded", () => {
 
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+    const form = document.getElementById("registerForm");
+
+    // stop script if this page doesn't have the register form
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+
+        if (!emailInput || !passwordInput) return;
+
+        const email = emailInput.value;
+        const password = passwordInput.value;
+
+        try {
+
+            await createUserWithEmailAndPassword(auth, email, password);
+
+            alert("Registration successful");
+            window.location.href = "loginlogin222222.html";
+
+        } catch (error) {
+
+            alert(error.message);
+            console.error(error);
+
+        }
+
+    });
+
+});

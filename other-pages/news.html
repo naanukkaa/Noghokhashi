@@ -19,6 +19,23 @@
 
 </head>
 <body>
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-wrapper">
+
+            <div class="loader-visual">
+                <img src="../static/img/animation.gif" class="loader-gif" alt="loading">
+
+                <div class="loader-circles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <p class="loader-text">იტვირთება...</p>
+
+        </div>
+    </div>
     <div class="header-hover-zone"></div>
     <header class="main-navbar">
         <div class="nav-container">
@@ -49,7 +66,7 @@
                         <a href="#" class="dropdown-link">სასწავლო პროცესი</a>
                         <div class="dropdown-menu">
                             <a href="personal.html">პერსონალი</a>
-                            <a href="studying-process/wreebi.html">წრეები</a>
+                            <a href="studying-process/wreebi.html">წრეები/კლუბები</a>
                             <a href="studying-process/migeba-mobiloba.html">მიღება და მობილობა</a>
                             <a href="studying-process/registracia.html">სკოლაში რეგისტრაცია</a>
                         
@@ -67,22 +84,33 @@
     
       <main>
          <div class="main-content">
-             <p class="main-p">სიახლეები</p>
-
-             <article class="news-card">
-                 <div class="news-content">
-                     <div class="news-title-wrapper">
-                         <h2 class="news-title">სათაური</h2>
-                     </div>
-                     <div class="news-description-wrapper">
-                         <p class="news-description">აღწერა</p>
-                     </div>
-                     <div class="news-date-wrapper">
-                         <p class="news-date">თარიღი</p>
-                     </div>
-                 </div>
-                 <div class="news-image"></div>
-             </article>
+            <div class="news-entrance">
+                <p class="main-p">სიახლეები</p>
+                
+                <div class="admin-dropdown" id="adminDropdown">
+                    <div class="dropdown-tab">წაშლა/დამატება</div>
+                    
+                    <div class="dropdown-menu adm-opt">
+                        <button class="action-btn" id="delete-news-btn">
+                            <img src="../static/icon/trash.svg" alt="delete" class="icon-img">
+                            <span class="btn-text">წაშლა</span>
+                        </button>
+                        <button class="action-btn" id="edit-news-btn">
+                            <a href="admin/edit-news.html">
+                                <img src="../static/icon/edit.svg" alt="edit" class="icon-img">
+                                <span class="btn-text">რედაქტირება</span>
+                            </a>
+                        </button>
+                        <button class="action-btn" id="add-news-btn">
+                            <a href="admin/add-news.html">
+                                <img src="../static/icon/add.svg" alt="add" class="icon-img">
+                                <span class="btn-text">დამატება</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <div id="newsContainer"></div>
 
          </div>
      </main>
@@ -136,8 +164,10 @@
                         <span>+995 577 55 93 45</span>
                     </div>
                     <div class="contact-item">
-                        <img src="../static/icon/mail.svg" alt="">
-                        <span>skola@mes.gov.ge</span>
+                        <img src="static/icon/mail.svg" alt="">
+                        <a href="https://mail.google.com/mail/?view=cm&to=noghokhashi@mes.gov.ge" target="_blank">
+                            noghokhashi@mes.gov.ge
+                        </a>
                     </div>
                 </div>
             </div>
@@ -150,8 +180,9 @@
     <button class="scroll-top" id="scrollTopBtn">
         ↑
     </button>
-    <script src="../static/js/global.js"></script>
-    <script src="../static/js/register.js"></script>
+    <script type="module" src="../static/js/global.js"></script>
+    <script type="module" src="../static/js/firebase.js"></script>
+    <script type="module" src="../static/js/add-news.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>

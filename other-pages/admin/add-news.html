@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ნოღოხაშის საჯარო სკოლა</title>
+    <link rel="stylesheet" href="../../static/css/reset.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+    <link rel="stylesheet" href="../../static/css/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"rel="stylesheet"/>
+
+    <!-- fonts -->
+     <link rel="stylesheet" href="https://cdn.web-fonts.ge/fonts/bpg-banner-caps/css/bpg-banner-caps.min.css">
+     <link rel="stylesheet" href="https://cdn.web-fonts.ge/fonts/bpg-rioni-arial/css/bpg-rioni-arial.min.css">
+
+     <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-wrapper">
+
+            <div class="loader-visual">
+                <img src="../../static/img/animation.gif" class="loader-gif" alt="loading">
+
+                <div class="loader-circles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <p class="loader-text">იტვირთება...</p>
+
+        </div>
+    </div>
+    <div class="header-hover-zone"></div>
+    <header class="main-navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo-container">
+                <div class="logo"></div>
+                <div class="school-name">ნოღოხაშის საჯარო სკოლა</div>
+            </a>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="menu">
+                <div class="dropdown">
+                        <a href="#" class="dropdown-link">ჩვენს შესახებ</a>
+                        <div class="dropdown-menu">
+                            <a href="../our-school/istoria.html">ისტორია</a>
+                            <a href="../our-school/misia-xedva.html">მისია და ხედვა</a>
+                            <a href="../our-school/struqtura.html">სტრუქტურა</a>
+                            <a href="../our-school/dokumentebi.html">იურიდიული დოკუმენტები</a>
+                            <a href="../our-school/strategiuli.html">სტრატეგიული გეგმა</a>
+                            <a href="../our-school/biujeti.html">ბიუჯეტი</a>
+                            <a href="../our-school/infrastruqtura.html">ინფრასტრუქტურა</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-link">სასწავლო პროცესი</a>
+                        <div class="dropdown-menu">
+                            <a href="../personal.html">პერსონალი</a>
+                            <a href="../studying-process/wreebi.html">წრეები/კლუბები</a>
+                            <a href="../studying-process/migeba-mobiloba.html">მიღება და მობილობა</a>
+                            <a href="../studying-process/registracia.html">სკოლაში რეგისტრაცია</a>
+                        
+                        </div>
+                    </div>
+
+                    <a href="../library/debuleba.html">ბიბლიოთეკა</a>
+                    <a href="../news.html">სიახლეები</a>
+                    <a href="../gallery.html">გალერეა</a>
+                    <a href="../contact.html">კონტაქტი</a>
+
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+
+        <section class="admin-news fade-in">
+
+            <h1 class="admin-title">სიახლის დამატება</h1>
+
+            <form id="newsForm" class="admin-form">
+
+                <div class="admin-field">
+                    <label>სათაური</label>
+                    <input type="text" id="newsTitle" placeholder="სიახლის სათაური" required>
+                </div>
+
+                <div class="admin-field">
+                    <label>აღწერა</label>
+                    <textarea id="newsDesc" rows="4" placeholder="მოკლე აღწერა" required></textarea>
+                </div>
+
+                <div class="admin-row">
+
+                    <div class="admin-field">
+                        <label>თარიღი</label>
+                        <input type="date" id="newsDate" name="date">
+                    </div>
+
+                    <div class="admin-field">
+                        <label>სურათი</label>
+                        <input type="file" id="newsImage" accept="image/*" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="admin-submit">
+                    გამოქვეყნება
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">  
+            <div class="footer-left">
+                <div class="footer-logo-section">
+                    <div class="footer-logo"></div>
+                    <div class="footer-school-name">ნოღოხაშის<br>საჯარო სკოლა</div>
+                </div>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100063573340652" target="_blank" class="social-icon" aria-label="social media">
+                        <img src="../../static/icon/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="https://mes.gov.ge/" target="_blank" class="social-icon mini" aria-label="Social Media">
+                        <img src="../../static/icon/saministro.svg" alt="saministro">
+                    </a>
+                    <a href="https://naec.ge/" target="_blank" class="social-icon" aria-label="Social Media">
+                        <img src="../../static/icon/naec.svg" alt="naec">
+                    </a>
+                    <a href="https://onlineschool.emis.ge/auth" target="_blank" class="social-icon mini" aria-label="Social Media">
+                        <img src="../../static/icon/jurnal.svg" alt="jurnali">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <h3 class="footer-heading footer-toggle"> ზოგადი ინფორმაცია <span class="arrow">▼</span></h3>
+                <nav class="footer-links">
+                    <a href="../our-school/istoria.html">ისტორია</a>
+                    <a href="../our-school/infrastuctura.html">ინფრასტრუქტურა</a>
+                    <a href="../our-school/struqtura.html">ორგანიზაციული სტრუქტურა</a>
+                    <a href="../studying-process/registracia.html">სკოლაში რეგისტრაცია</a>
+                    <a href="../gallery.html">გალერეა</a>
+                    <a href="../news.html">სიახლეები</a>
+                </nav>
+            </div>
+
+            <div class="footer-right">
+                <a href="../contact.html"><h3 class="footer-heading">კონტაქტი</h3></a>
+                <div class="footer-contact">
+                    <a href="https://maps.app.goo.gl/xTBkVukLy9KH2Gym8" target="_blank">
+                        <div class="contact-item">
+                            <img src="../../static/icon/location_on.svg" alt="">
+                            <span>ქ.აბაშა, შუბლაძის #23</span>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <img src="../../static/icon/call.svg" alt="">
+                        <span>+995 577 55 93 45</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../../static/icon/mail.svg" alt="">
+                        <a href="https://mail.google.com/mail/?view=cm&to=noghokhashi@mes.gov.ge" target="_blank">
+                            noghokhashi@mes.gov.ge
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-separator"></div>
+        <div class="footer-bottom">© ყველა უფლება დაცულია. ნოღოხაშის საჯარო სკოლა</div>
+    </footer>
+    
+    <button class="scroll-top" id="scrollTopBtn">
+        ↑
+    </button>
+    <script type="module" src="../../static/js/global.js"></script>
+    <script type="module" src="../../static/js/firebase.js"></script>
+    <script type="module" src="../../static/js/admin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

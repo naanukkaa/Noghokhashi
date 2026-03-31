@@ -19,6 +19,23 @@
 
 </head>
 <body>
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-wrapper">
+
+            <div class="loader-visual">
+                <img src="../static/img/animation.gif" class="loader-gif" alt="loading">
+
+                <div class="loader-circles">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <p class="loader-text">იტვირთება...</p>
+
+        </div>
+    </div>
     <div class="header-hover-zone"></div>
     <header class="main-navbar">
         <div class="nav-container">
@@ -49,7 +66,7 @@
                         <a href="#" class="dropdown-link">სასწავლო პროცესი</a>
                         <div class="dropdown-menu">
                             <a href="personal.html">პერსონალი</a>
-                            <a href="studying-process/wreebi.html">წრეები</a>
+                            <a href="studying-process/wreebi.html">წრეები/კლუბები</a>
                             <a href="studying-process/migeba-mobiloba.html">მიღება და მობილობა</a>
                             <a href="studying-process/registracia.html">სკოლაში რეგისტრაცია</a>
                         
@@ -65,8 +82,106 @@
         </div>
     </header>
     
-    
+    <section class="contact-section fade-in">
+        <div class="contact-wrapper">
 
+            <div class="contact-info-card">
+                <div class="contact-badge">კონტაქტი</div>
+
+                <h2 class="contact-title">დაგვიკავშირდით</h2>
+
+                <p class="contact-subtitle">
+                    თუ გაქვთ შეკითხვა, წინადადება ან გსურთ მეტი ინფორმაციის მიღება,
+                    მოგვწერეთ ან დაგვიკავშირდით ქვემოთ მოცემული გზებით.
+                </p>
+
+                <div class="contact-info-list">
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon-circle">
+                            <img src="../static/icon/call.svg" alt="phone">
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-label">ტელეფონი</span>
+                            <p>+995 577 55 93 45</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon-circle">
+                            <img src="../static/icon/mail.svg" alt="mail">
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-label">ელ-ფოსტა</span>
+                            <p>noghokhashi@mes.gov.ge</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon-circle">
+                            <img src="../static/icon/location_on.svg" alt="location">
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-label">მისამართი</span>
+                            <p>ქ. აბაშა, შუბლაძის #23</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon-circle">
+                            <img src="../static/icon/clock.svg" alt="time">
+                        </div>
+                        <div class="contact-info-text">
+                            <span class="contact-label">სამუშაო საათები</span>
+                            <p>ორშაბათი - პარასკევი, 09:00 - 17:00</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3 class="form-title">მოგვწერეთ</h3>
+
+                <form id="contactForm" class="contact-form">
+
+                    <div class="form-grid">
+                        <input type="text" id="name" placeholder="სახელი" required>
+                        <input type="email" id="email" placeholder="ელ-ფოსტა" required>
+                    </div>
+
+                    <input type="text" id="subject" placeholder="თემა" required>
+
+                    <textarea id="message" rows="7" placeholder="შეტყობინება" required></textarea>
+
+                    <button type="submit" class="contact-submit-btn">გაგზავნა</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="map-section">
+        <div class="map-container">
+
+            <div class="map-header">
+                <h3>სკოლის მდებარეობა</h3>
+                <a href="https://maps.app.goo.gl/xTBkVukLy9KH2Gym8" target="_blank">
+                    გახსნა Google Maps-ში
+                </a>
+            </div>
+
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2855.058607404513!2d42.21361907598148!3d42.21228397120694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c578b0b8ba981%3A0x97f572b053212ae7!2sNoghokhashi%20Public%20School!5e1!3m2!1sen!2sge!4v1773919863761!5m2!1sen!2sge" 
+                    allowfullscreen=""
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">  
@@ -117,8 +232,10 @@
                         <span>+995 577 55 93 45</span>
                     </div>
                     <div class="contact-item">
-                        <img src="../static/icon/mail.svg" alt="">
-                        <span>skola@mes.gov.ge</span>
+                        <img src="static/icon/mail.svg" alt="">
+                        <a href="https://mail.google.com/mail/?view=cm&to=noghokhashi@mes.gov.ge" target="_blank">
+                            noghokhashi@mes.gov.ge
+                        </a>
                     </div>
                 </div>
             </div>
@@ -131,8 +248,9 @@
     <button class="scroll-top" id="scrollTopBtn">
         ↑
     </button>
-    <script src="../static/js/global.js"></script>
-    <script src="../static/js/register.js"></script>
+    <script type="module" src="../static/js/global.js"></script>
+    <script type="module" src="../static/js/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
