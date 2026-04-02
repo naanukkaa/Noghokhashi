@@ -26,6 +26,7 @@
   font-weight: 400;
   line-height: 150%;
   margin: 0 0 28px;
+  margin-left: 2px;
 }
 
 .title-blue {
@@ -42,7 +43,7 @@
   font-weight: 400;
   line-height: normal;
   color: #032431;
-  margin: 0 0 60px;
+  margin: 0 0 62px;
   max-width: 392px;
 }
 
