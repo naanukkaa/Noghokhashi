@@ -1,0 +1,158 @@
+.main-p {
+  margin-left: 58px;
+  margin-top: -70px;
+
+}
+.library-page {
+    padding: 130px 108px;
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+}
+
+.library-hero {
+    max-width: 980px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.library-hero h1 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 42px;
+    color: #315283;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.library-hero p {
+    max-width: 840px;
+    margin: 0 auto;
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #4f6487;
+}
+
+.library-quick-info {
+    max-width: 1200px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.library-quick-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    padding: 26px 22px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(49, 82, 131, 0.08);
+    border-top: 6px solid #C6A067;
+}
+
+.library-quick-card h3 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 22px;
+    color: #315283;
+    margin-bottom: 10px;
+}
+
+.library-quick-card p {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1f1f1f;
+}
+
+.library-regulation {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.regulation-block {
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 28px;
+    padding: 30px 34px;
+    box-shadow: 0 12px 30px rgba(49, 82, 131, 0.08);
+    border-left: 8px solid #6c8fc4;
+}
+
+.regulation-block h2 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 28px;
+    color: #315283;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.regulation-block h3 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 22px;
+    color: #315283;
+    margin: 18px 0 10px;
+    line-height: 1.5;
+}
+
+.regulation-block ol {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.regulation-block ol li,
+.regulation-sublist li {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.95;
+    color: #1f1f1f;
+    margin-bottom: 10px;
+}
+
+.regulation-sublist {
+    margin: 0 0 8px 0;
+    padding-left: 22px;
+}
+
+.regulation-sublist li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 992px) {
+    .library-page {
+        padding: 90px 40px;
+    }
+
+    .library-quick-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .library-page {
+        padding: 70px 20px;
+    }
+
+    .library-hero h1 {
+        font-size: 30px;
+    }
+
+    .library-hero p,
+    .library-quick-card p,
+    .regulation-block ol li,
+    .regulation-sublist li {
+        font-size: 16px;
+    }
+
+    .library-quick-card h3,
+    .regulation-block h3 {
+        font-size: 20px;
+    }
+
+    .regulation-block h2 {
+        font-size: 23px;
+    }
+
+    .regulation-block {
+        padding: 24px 20px;
+    }
+}

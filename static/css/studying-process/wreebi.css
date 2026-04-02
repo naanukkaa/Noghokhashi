@@ -1,9 +1,220 @@
+.main-p {
+  margin-left: 58px;
+  margin-top: -70px;
 
-.main-content {
-  min-height: 500px;
-  margin-top: 40px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 54px 140px;
+}
+.clubs-page {
+    padding: 130px 108px;
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+}
+
+.clubs-hero {
+    max-width: 950px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.clubs-hero h1 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 42px;
+    color: #315283;
+    margin-bottom: 14px;
+}
+
+.clubs-hero p {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #4f6487;
+}
+
+.clubs-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.club-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 30px;
+    padding: 34px;
+    box-shadow: 0 14px 35px rgba(49, 82, 131, 0.08);
+}
+
+.club-top {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d9e3f1;
+}
+
+.club-logo-wrap {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 24px;
+    background: #f1f6fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #d9e3f1;
+}
+
+.club-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.club-main-info {
+    flex: 1;
+}
+
+.club-title {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 30px;
+    color: #315283;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.club-leader,
+.club-count {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1f1f1f;
+    margin-bottom: 6px;
+}
+
+.club-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.club-section h3,
+.club-gallery h3 {
+    font-family: "BPG Banner Caps", sans-serif;
+    font-size: 24px;
+    color: #315283;
+    margin-bottom: 12px;
+}
+
+.club-section p {
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #1f1f1f;
+}
+
+.club-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.club-section ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-family: "BPG Rioni Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1f1f1f;
+}
+
+.club-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #315283;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.club-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.club-gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 8px 18px rgba(49, 82, 131, 0.08);
+    transition: 0.3s ease;
+}
+
+.club-gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+    .clubs-page {
+        padding: 90px 40px;
+    }
+
+    .club-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .club-logo-wrap {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+    }
+
+    .club-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .clubs-page {
+        padding: 70px 20px;
+    }
+
+    .clubs-hero h1 {
+        font-size: 30px;
+    }
+
+    .clubs-hero p,
+    .club-leader,
+    .club-count,
+    .club-section p,
+    .club-section ul li {
+        font-size: 16px;
+    }
+
+    .club-title {
+        font-size: 24px;
+    }
+
+    .club-section h3,
+    .club-gallery h3 {
+        font-size: 20px;
+    }
+
+    .club-card {
+        padding: 24px 20px;
+    }
+
+    .club-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .club-gallery-grid img {
+        height: 200px;
+    }
 }
