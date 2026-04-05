@@ -89,9 +89,31 @@
     margin: 0;
 }
 
-@media (max-width: 992px) {
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 769px) {
+    .main-p {
+        margin-top: -50px;
+        margin-left: 30px;
+        margin-bottom: 24px;
+    }
+
     .documents-page {
-        padding: 90px 40px;
+        padding: 100px 40px 80px;
+    }
+
+    .documents-hero {
+        margin: 0 auto 40px;
+    }
+
+    .documents-hero h1 {
+        font-size: 34px;
+    }
+
+    .documents-hero p {
+        font-size: 17px;
+        line-height: 1.8;
     }
 
     .documents-grid {
@@ -102,19 +124,43 @@
     .document-image-wrap {
         height: 200px;
     }
+
+    .document-card-body {
+        min-height: 88px;
+        padding: 20px 18px;
+    }
+
+    .document-card-body h2 {
+        font-size: 21px;
+    }
 }
 
-@media (max-width: 576px) {
+/* ========================= */
+/* MOBILE L */
+/* ========================= */
+@media (max-width: 426px) {
+    .main-p {
+        margin-top: -30px;
+        margin-left: 16px;
+        margin-bottom: 20px;
+    }
+
     .documents-page {
-        padding: 70px 20px;
+        padding: 85px 18px 60px;
+    }
+
+    .documents-hero {
+        margin: 0 auto 30px;
     }
 
     .documents-hero h1 {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.5;
     }
 
     .documents-hero p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .documents-grid {
@@ -122,16 +168,70 @@
         gap: 20px;
     }
 
+    .document-card {
+        border-radius: 22px;
+    }
+
     .document-image-wrap {
-        height: 190px;
+        height: 185px;
     }
 
     .document-card-body {
-        min-height: 82px;
-        padding: 18px 16px;
+        min-height: 78px;
+        padding: 16px 14px;
     }
 
     .document-card-body h2 {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+/* ========================= */
+/* MOBILE S */
+/* ========================= */
+@media (max-width: 325px) {
+    .main-p {
+        margin-top: -20px;
+        margin-left: 10px;
+        margin-bottom: 16px;
+    }
+
+    .documents-page {
+        padding: 75px 12px 50px;
+    }
+
+    .documents-hero {
+        margin: 0 auto 24px;
+    }
+
+    .documents-hero h1 {
+        font-size: 22px;
+    }
+
+    .documents-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .documents-grid {
+        gap: 16px;
+    }
+
+    .document-card {
+        border-radius: 18px;
+    }
+
+    .document-image-wrap {
+        height: 165px;
+    }
+
+    .document-card-body {
+        min-height: 72px;
+        padding: 14px 12px;
+    }
+
+    .document-card-body h2 {
+        font-size: 16px;
     }
 }

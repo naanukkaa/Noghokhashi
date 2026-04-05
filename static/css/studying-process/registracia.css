@@ -255,61 +255,41 @@
     background: #4d73ab;
 }
 
-@media (max-width: 1200px) {
-    .registration-quick-dates {
-        grid-template-columns: repeat(3, 1fr);
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 769px) {
+    .main-p {
+        margin-left: 10px;
+        margin-top: 0;
     }
-}
 
-@media (max-width: 992px) {
     .registration-page {
-        padding: 90px 40px;
+        padding: 100px 40px 80px;
     }
 
-    .registration-steps {
+    .registration-hero {
+        margin: 0 auto 36px;
+    }
+
+    .registration-hero h2 {
+        font-size: 34px;
+    }
+
+    .registration-hero p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    .registration-steps,
+    .registration-bottom-row {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .registration-quick-dates {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .registration-hero h2 {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 576px) {
-    .registration-page {
-        padding: 70px 20px;
-    }
-
-    .registration-hero h2 {
-        font-size: 30px;
-    }
-
-    .registration-hero p,
-    .registration-card p,
-    .registration-highlight-box li,
-    .registration-docs-box li,
-    .faq-item p,
-    .registration-warning,
-    .quick-date-card p {
-        font-size: 16px;
-    }
-
-    .registration-card h4 {
-        font-size: 23px;
-    }
-
-    .registration-highlight-box h3,
-    .registration-docs-box h3,
-    .registration-faq h3 {
-        font-size: 24px;
-    }
-
-    .registration-quick-dates {
-        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .registration-highlight-box,
@@ -317,17 +297,210 @@
     .registration-warning,
     .registration-faq,
     .registration-card {
-        padding: 24px 20px;
+        padding: 26px 24px;
+        border-radius: 24px;
+    }
+
+    .registration-highlight-box h3,
+    .registration-docs-box h3,
+    .registration-faq h3 {
+        font-size: 26px;
+    }
+
+    .registration-card h4 {
+        font-size: 24px;
+    }
+
+    .faq-item h4 {
+        font-size: 20px;
+    }
+
+    .registration-card p,
+    .faq-item p,
+    .registration-highlight-box li,
+    .registration-docs-box li,
+    .registration-warning,
+    .quick-date-card p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .registration-btn {
+        min-height: 70px;
+        font-size: 17px;
+        padding: 16px 24px;
+    }
+}
+
+/* ========================= */
+/* MOBILE L */
+/* ========================= */
+@media (max-width: 426px) {
+    .main-p {
+        margin-left: 6px;
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    .registration-page {
+        padding: 85px 18px 60px;
+    }
+
+    .registration-hero {
+        margin: 0 auto 28px;
+    }
+
+    .registration-hero h2 {
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .registration-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .registration-quick-dates {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .registration-highlight-box,
+    .registration-docs-box,
+    .registration-warning,
+    .registration-faq,
+    .registration-card {
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .registration-highlight-box h3,
+    .registration-docs-box h3,
+    .registration-faq h3 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .registration-card h4 {
+        font-size: 20px;
+    }
+
+    .faq-item h4 {
+        font-size: 18px;
+    }
+
+    .registration-date {
+        font-size: 16px;
+    }
+
+    .registration-card p,
+    .faq-item p,
+    .registration-highlight-box li,
+    .registration-docs-box li,
+    .registration-warning,
+    .quick-date-card p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .quick-date-card {
+        padding: 18px 14px;
+        border-radius: 18px;
+    }
+
+    .registration-warning,
+    .registration-highlight-box {
+        border-left-width: 6px;
     }
 
     .registration-btn {
         width: 100%;
-        text-align: center;
+        min-height: 62px;
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+
+    .registration-button-wrap,
+    .registration-bottom-row {
+        margin-top: 28px;
     }
 }
 
-@media (max-width: 768px) {
-    .registration-bottom-row {
-        grid-template-columns: 1fr;
+/* ========================= */
+/* MOBILE S */
+/* ========================= */
+@media (max-width: 325px) {
+    .main-p {
+        margin-left: 4px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .registration-page {
+        padding: 75px 12px 50px;
+    }
+
+    .registration-hero {
+        margin: 0 auto 24px;
+    }
+
+    .registration-hero h2 {
+        font-size: 22px;
+    }
+
+    .registration-hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .registration-highlight-box,
+    .registration-docs-box,
+    .registration-warning,
+    .registration-faq,
+    .registration-card {
+        padding: 18px 14px;
+        border-radius: 18px;
+    }
+
+    .registration-highlight-box h3,
+    .registration-docs-box h3,
+    .registration-faq h3 {
+        font-size: 18px;
+    }
+
+    .registration-card h4 {
+        font-size: 17px;
+    }
+
+    .faq-item h4 {
+        font-size: 16px;
+    }
+
+    .registration-date,
+    .registration-stage,
+    .quick-date-card span {
+        font-size: 13px;
+    }
+
+    .registration-card p,
+    .faq-item p,
+    .registration-highlight-box li,
+    .registration-docs-box li,
+    .registration-warning,
+    .quick-date-card p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .registration-list li,
+    .registration-highlight-box li,
+    .registration-docs-box li {
+        padding-left: 22px;
+    }
+
+    .registration-btn {
+        min-height: 56px;
+        font-size: 14px;
+        padding: 12px 14px;
     }
 }

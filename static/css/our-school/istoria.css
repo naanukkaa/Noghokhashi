@@ -385,54 +385,288 @@
     transform: skewX(-8deg);
 }
 
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 769px) {
+    .main-p {
+        margin-left: 10px;
+        margin-top: 0;
+    }
 
-@media (max-width: 992px) {
     .school-history-timeline {
-        padding: 90px 40px;
+        padding: 100px 40px 80px;
+    }
+
+    .history-top {
+        margin-bottom: 34px;
+    }
+
+    .history-top h2 {
+        font-size: 34px;
+    }
+
+    .history-top p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .history-timeline {
+        max-width: 100%;
+        margin: 0 auto 36px;
+        gap: 12px;
+    }
+
+    .history-timeline::before {
+        left: 48px;
+        right: 48px;
+    }
+
+    .history-point {
+        width: 78px;
+        height: 78px;
+        font-size: 13px;
+        padding: 8px;
+        line-height: 1.15;
+    }
+
+    .history-panels {
+        max-width: 100%;
     }
 
     .history-panel,
     .history-panel.active {
         grid-template-columns: 1fr;
         gap: 24px;
+        padding: 28px 24px;
+        border-radius: 24px;
     }
 
     .history-image img {
         height: 280px;
+        border-radius: 18px;
     }
 
     .history-text h3 {
         font-size: 28px;
+        margin-bottom: 14px;
+    }
+
+    .history-text p {
+        font-size: 17px;
+        line-height: 1.75;
+        margin-bottom: 14px;
+    }
+
+    .history-list-title {
+        font-size: 18px;
+        margin: 6px 0 10px;
+    }
+
+    .custom-list li {
+        font-size: 17px;
+        line-height: 1.7;
+        padding-left: 22px;
+    }
+
+    .custom-list li::before {
+        font-size: 22px;
+    }
+
+    .history-signature {
+        margin-top: 28px;
+        margin-right: 40px;
+    }
+
+    .history-signature p {
+        font-size: 20px;
+        line-height: 1.6;
     }
 }
 
-@media (max-width: 576px) {
-    .school-history-timeline {
-        padding: 70px 20px;
+/* ========================= */
+/* MOBILE L */
+/* ========================= */
+@media (max-width: 426px) {
+    .main-p {
+        margin-left: 6px;
+        margin-top: 0;
     }
 
-    .history-point {
-        width: 74px;
-        height: 74px;
-        font-size: 12px;
-        padding: 8px;
+    .school-history-timeline {
+        padding: 85px 18px 60px;
+    }
+
+    .history-top {
+        margin-bottom: 28px;
+    }
+
+    .history-top h2 {
+        font-size: 26px;
+        line-height: 1.45;
+    }
+
+    .history-top p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .history-timeline {
+        margin: 0 auto 28px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .history-timeline::before {
-        left: 45px;
-        right: 45px;
+        display: none;
     }
 
-    .history-text h3 {
-        font-size: 24px;
+    .history-point {
+        width: 68px;
+        height: 68px;
+        font-size: 11px;
+        padding: 6px;
+        border-width: 3px;
     }
 
-    .history-text p,
-    .custom-list li {
-        font-size: 16px;
+    .history-panel,
+    .history-panel.active {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 22px 18px;
+        border-radius: 20px;
     }
 
     .history-image img {
         height: 220px;
+        border-radius: 16px;
+    }
+
+    .history-text h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        line-height: 1.35;
+    }
+
+    .history-text p {
+        font-size: 15px;
+        line-height: 1.65;
+        margin-bottom: 12px;
+    }
+
+    .history-list-title {
+        font-size: 16px;
+        margin: 4px 0 8px;
+    }
+
+    .custom-list li {
+        font-size: 15px;
+        line-height: 1.6;
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+
+    .custom-list li::before {
+        font-size: 20px;
+    }
+
+    .history-signature {
+        margin-top: 22px;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .history-signature p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+/* ========================= */
+/* MOBILE S */
+/* ========================= */
+@media (max-width: 325px) {
+    .main-p {
+        margin-left: 10px;
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .school-history-timeline {
+        padding: 75px 12px 50px;
+    }
+
+    .history-top {
+        margin-bottom: 24px;
+    }
+
+    .history-top h2 {
+        font-size: 22px;
+    }
+
+    .history-top p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .history-timeline {
+        gap: 6px;
+        margin: 0 auto 24px;
+    }
+
+    .history-point {
+        width: 58px;
+        height: 58px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .history-panel,
+    .history-panel.active {
+        padding: 18px 14px;
+        border-radius: 18px;
+        gap: 16px;
+    }
+
+    .history-image img {
+        height: 180px;
+        border-radius: 14px;
+    }
+
+    .history-text h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .history-text p {
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 10px;
+    }
+
+    .history-list-title {
+        font-size: 15px;
+    }
+
+    .custom-list li {
+        font-size: 14px;
+        line-height: 1.5;
+        padding-left: 18px;
+        margin-bottom: 7px;
+    }
+
+    .custom-list li::before {
+        font-size: 18px;
+    }
+
+    .history-signature {
+        margin-top: 18px;
+    }
+
+    .history-signature p {
+        font-size: 15px;
+        line-height: 1.5;
     }
 }

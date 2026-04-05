@@ -13,6 +13,7 @@
     margin-top: 110px;
     margin-bottom: 30px;
 }
+
 /* ===== Hero Banner ===== */
 
 .hero-banner {
@@ -84,7 +85,6 @@
     align-items: center;
 }
 
-
 /* ===== Teacher Card ===== */
 
 .teacher-card {
@@ -154,34 +154,60 @@
 .link {
     color: #000000;
 }   
-/* ===== Responsive ===== */
 
-/* ===== Tablet (2 cards) ===== */
-@media (max-width: 770px) {
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 769px) {
 
     .page-header-bar {
+        margin: 110px 50px 36px;
+    }
+
+    .main-p {
         margin-left: 50px;
-        margin-right: 50px;
+        margin-top: 100px;
+        margin-bottom: 24px;
     }
 
     .hero-banner {
         height: 380px;
+        margin-bottom: 50px;
     }
 
-    .teachers-grid {
-        grid-template-columns: repeat(2, 320px);
-        justify-content: center;
-        gap: 20px;
+    .featured-teacher {
+        gap: 28px;
+        margin-bottom: 50px;
+    }
+
+    .featured-teacher-image {
+        width: 300px;
+        height: 300px;
     }
 
     .featured-teacher-name {
         font-size: 26px;
+        margin-bottom: 10px;
     }
 
     .featured-teacher-desc {
         font-size: 18px;
-        margin-top: 30px;
+        margin-top: 20px;
+        line-height: 1.7;
     }
+
+    .teachers-heading {
+        font-size: 26px;
+        margin-top: 34px;
+        margin-bottom: 26px;
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(2, 320px);
+        gap: 20px;
+        justify-content: center;
+    }
+
     .teacher-card {
         width: 320px;
     }
@@ -190,52 +216,188 @@
         height: 250px;
     }
 
+    .teacher-name-overlay {
+        font-size: 18px;
+        height: 56px;
+    }
+
+    .teacher-card-body {
+        min-height: 190px;
+        padding: 18px;
+    }
+
+    .teacher-desc {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .last {
+        margin-bottom: 50px;
+    }
 }
 
+/* ========================= */
+/* MOBILE L */
+/* ========================= */
+@media (max-width: 426px) {
 
-/* ===== Phone Large (1 card) ===== */
-@media (max-width: 430px) {
     .page-header-bar {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin: 95px 20px 28px;
+    }
+
+    .main-p {
+        margin-left: 20px;
+        margin-top: 90px;
+        margin-bottom: 20px;
     }
 
     .hero-banner {
-        height: 300px;
+        height: 260px;
+        margin-bottom: 36px;
     }
+
     .featured-teacher {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 22px;
+        margin-bottom: 40px;
     }
+
+    .featured-teacher-image {
+        width: 100%;
+        max-width: 320px;
+        height: 260px;
+    }
+
+    .featured-teacher-name {
+        font-size: 22px;
+    }
+
+    .featured-teacher-desc {
+        font-size: 16px;
+        line-height: 1.65;
+        margin-top: 10px;
+    }
+
+    .teachers-heading {
+        font-size: 22px;
+        margin-top: 28px;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
     .teachers-grid {
-        grid-template-columns: 300px;
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
     .teacher-card {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .teacher-card-image {
         height: 230px;
     }
 
+    .teacher-name-overlay {
+        font-size: 17px;
+        height: 52px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .teacher-card-body {
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .teacher-desc {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .last {
+        margin-bottom: 36px;
+    }
 }
 
+/* ========================= */
+/* MOBILE S */
+/* ========================= */
+@media (max-width: 325px) {
 
-/* ===== Phone Small (1 card smaller) ===== */
-@media (max-width: 350px) {
+    .page-header-bar {
+        margin: 85px 12px 24px;
+    }
+
+    .main-p {
+        margin-left: 12px;
+        margin-top: 70px;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+
+    .hero-banner {
+        height: 210px;
+        margin-bottom: 28px;
+    }
+
+    .featured-teacher {
+        gap: 18px;
+        margin-bottom: 32px;
+    }
+
+    .featured-teacher-image {
+        max-width: 260px;
+        height: 220px;
+    }
+
+    .featured-teacher-name {
+        font-size: 18px;
+    }
+
+    .featured-teacher-desc {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .teachers-heading {
+        font-size: 18px;
+        margin-top: 22px;
+        margin-bottom: 16px;
+    }
 
     .teachers-grid {
-        grid-template-columns: 260px;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .teacher-card {
-        width: 260px;
+        max-width: 260px;
     }
 
     .teacher-card-image {
-        height: 210px;
+        height: 200px;
     }
 
+    .teacher-name-overlay {
+        font-size: 15px;
+        height: 46px;
+    }
+
+    .teacher-card-body {
+        padding: 14px;
+    }
+
+    .teacher-desc {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .last {
+        margin-bottom: 28px;
+    }
 }

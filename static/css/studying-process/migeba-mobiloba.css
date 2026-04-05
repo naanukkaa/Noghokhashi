@@ -130,46 +130,194 @@
     background: #4d73ab;
 }
 
-@media (max-width: 992px) {
+/* ========================= */
+/* TABLET */
+/* ========================= */
+@media (max-width: 769px) {
+    .main-p{
+        margin-left: 8px;
+        margin-top: 0px;
+    }
+
     .admission-mobility-page {
-        padding: 90px 40px;
+        padding: 100px 40px 80px;
+    }
+
+    .admission-hero {
+        margin: 0 auto 36px;
+    }
+
+    .admission-hero h2 {
+        font-size: 34px;
+    }
+
+    .admission-hero p {
+        font-size: 17px;
+        line-height: 1.8;
     }
 
     .admission-main-grid,
     .mobility-grid,
     .admission-bottom-row {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .admission-mobility-page {
-        padding: 70px 20px;
-    }
-
-    .admission-hero h2 {
-        font-size: 30px;
-    }
-
-    .admission-hero p,
-    .admission-box p,
-    .mobility-card p,
-    .admission-note-box p {
-        font-size: 16px;
-    }
-
-    .admission-box h3,
-    .mobility-section-title h3 {
-        font-size: 24px;
-    }
-
-    .mobility-card h4 {
-        font-size: 21px;
+        gap: 20px;
     }
 
     .admission-box,
     .mobility-card,
     .admission-note-box {
-        padding: 24px 20px;
+        padding: 26px 24px;
+        border-radius: 24px;
+    }
+
+    .admission-box h3,
+    .mobility-section-title h3 {
+        font-size: 26px;
+    }
+
+    .mobility-card h4 {
+        font-size: 22px;
+    }
+
+    .admission-box p,
+    .mobility-card p,
+    .admission-note-box p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .admission-btn {
+        min-height: 70px;
+        font-size: 17px;
+        padding: 16px 24px;
+    }
+}
+
+/* ========================= */
+/* MOBILE L */
+/* ========================= */
+@media (max-width: 426px) {
+    .main-p{
+        margin-left: 6px;
+        margin-top: 0;
+        font-size: 15px;
+    }
+
+    .admission-mobility-page {
+        padding: 85px 18px 60px;
+    }
+
+    .admission-hero {
+        margin: 0 auto 28px;
+    }
+
+    .admission-hero h2 {
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .admission-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .admission-box,
+    .mobility-card,
+    .admission-note-box {
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .admission-box h3,
+    .mobility-section-title h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .mobility-card h4 {
+        font-size: 19px;
+    }
+
+    .admission-box p,
+    .mobility-card p,
+    .admission-note-box p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .admission-note-box {
+        border-left: 6px solid #C6A067;
+    }
+
+    .admission-bottom-row {
+        margin: 28px auto 0;
+    }
+
+    .admission-btn {
+        width: 100%;
+        min-height: 62px;
+        font-size: 15px;
+        padding: 14px 18px;
+    }
+}
+
+/* ========================= */
+/* MOBILE S */
+/* ========================= */
+@media (max-width: 325px) {
+    .main-p{
+        margin-left: 10px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .admission-mobility-page {
+        padding: 75px 12px 50px;
+    }
+
+    .admission-hero {
+        margin: 0 auto 24px;
+    }
+
+    .admission-hero h2 {
+        font-size: 22px;
+    }
+
+    .admission-hero p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .admission-box,
+    .mobility-card,
+    .admission-note-box {
+        padding: 18px 14px;
+        border-radius: 18px;
+    }
+
+    .admission-box h3,
+    .mobility-section-title h3 {
+        font-size: 18px;
+    }
+
+    .mobility-card h4 {
+        font-size: 17px;
+    }
+
+    .admission-box p,
+    .mobility-card p,
+    .admission-note-box p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .admission-note-box {
+        border-left: 5px solid #C6A067;
+    }
+
+    .admission-btn {
+        min-height: 56px;
+        font-size: 14px;
+        padding: 12px 14px;
     }
 }
